@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap');
+@import "./_destination.scss";
+@import "./_crew.scss";
+@import "./_technology.scss";
+
+$purple: hsla(231, 79%, 90%, 1);
+$dark: hsla(230, 35%, 7%, 1);
+$light: hsla(0, 0%, 100%, 1);
+
+::-webkit-scrollbar{
+    background-color: $dark;
+    width: 10px;
+
+}
+
+
+::-webkit-scrollbar-thumb{
+    background-color: hsla(0, 0%, 100%, 0.2);
+    border-radius: 10px;
+}
+
+*,::after,::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, main{
+    min-height: 100vh;
+    line-height: 1.5rem;
+}
+
+.active{
+    border-bottom: 2px solid $light !important;
+    margin-bottom: -2px !important;
+    color: $light !important;
+}
+
+.active-rounded{
+   background-color: $light !important;
+   opacity: 1 !important;
+   color: $dark !important;
+}
+
+.hide{
+    display: none !important;
+}
+
+.container{
+    padding: 0 2em;
+    margin: auto;
+}
+
+.navbar{
+    display: none;
+}
+
+.home-section{
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    gap: 12vh;
+    align-items: center;
+
+    .text-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+main{
+    background: url("../assets/home/background-home-mobile.jpg") no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+}
+
+.main-header{
+    padding: 1em 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        
+        img{
+            min-width: 100%;
+            width: 2.5rem;
+        }
+    }
+
+    hr{
+        display: none;
+    }
+}
+
+.ff-serif{
+    font-family: 'Bellefair', serif;
+}
+.ff-sans{
+    font-family: 'Barlow', sans-serif;
+}
+.ff-condensed{
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 2.7px;
+}
+
+.subheading1{
+    text-transform: uppercase;
+    font-size: 4vw;
+    font-weight: 400;
+    color: $purple;
+}
+
+.large-text{
+    margin: 0.75em 0;
+    font-size: 20vw;
+    text-transform: uppercase;
+}
+
+.paragraph{
+    color: $purple;
+    letter-spacing: 1.5px;
+    max-width: 80%;
+    font-size: 3vw;
+    line-height: 1.5rem;
+}
+
+.explore-btn{
+    display: flex;
+    margin-top: 3vh;
+    background-color: $light;
+    width: 45vw;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 6vw;
+    letter-spacing: 1.25px;
+    color: $dark;
+    z-index: 1;
+    text-transform: uppercase;
+
+    &::before{
+        position: absolute;
+        content: '';
+        background-color: hsla(0, 0%, 100%, 0.2);
+        width: 40vw;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        z-index: -1;
+        opacity: 0;
+    }
+
+    &:hover::before,
+    &:focus::before{
+        transform: scale(1.5);
+        opacity: 1;
+        transition: opacity 200ms ease-in,transform 300ms ease-in-out;
+    }
+}
+
+.button-wrapper{
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+}
+
+.mobile-nav{
+    display: block;
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    position: fixed;
+    top: 0;
+    right: 0;
+    min-height: 100vh;
+    min-width: 70vw;
+    max-width: 80vw;
+    z-index: 2;
+    transform: translateX(100%);
+    transition: transform 300ms ease-in-out;
+
+    .close{
+        display: flex;
+        justify-content: end;
+        padding: 20px;
+    }
+
+    .navlinks{
+        list-style-type: none;
+        padding: 3rem 2rem;
+        
+        a{  
+            display: block;
+            color: $light;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 4vw;
+            margin: 2rem 0;
+
+            span{
+                font-weight: 600;
+                margin-right: 3px;
+            }
+
+        }
+        
+    }
+}
+
+@media only screen and (min-width: 45rem){
+    main{
+        background: url("../assets/home/background-home-tablet.jpg") no-repeat;
+        background-size: cover;
+        overflow: hidden;
+    }
+
+    .main-header{
+        padding: 0rem 0rem 2rem 2rem;
+    }
+
+    .hamburger{
+        display: none;
+    }
+
+    .button-wrapper{
+        padding-bottom: 2rem;
+    }
+
+    .explore-btn{
+        width: 35vw;
+        font-size: 5vw;
+    }
+
+    .paragraph{
+        line-height: 2rem;
+    }
+
+    .navbar{
+        display: block;
+
+        .navbar-links{
+            display: flex;
+            list-style-type: none;
+            background-color: hsla(0, 2%, 24%, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 0 1em;
+            
+            a{  
+                display: inline-block;
+                color: $light;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 1.125rem;
+                margin: 2rem 1.125rem 0 1.125rem;
+                padding-bottom: 2rem;
+                
+                &:hover,
+                &:focus{
+                    border-bottom: 2px solid hsla(0, 0%, 100%, 0.2);
+                    margin-bottom: -2px;
+                }
+
+                span{
+                    display: none;
+                    font-weight: 600;
+                    margin-right: 3px;
+                }
+    
+            }
+        }
+        
+    }
+
+    .mobile-nav{
+        display: none;
+    }
+
+}
+
+@media only screen and (min-width: 64.5rem){
+    main{
+        background: url("../assets/home/background-home-desktop.jpg") no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-origin: 0 0;
+    }
+
+    .main-header{
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        background-color: $dark;
+        padding: 0.5rem 0;
+        backdrop-filter: blur(20px);
+        background-color: transparent;
+
+        .logo{
+            padding-inline: 2rem;
+
+            img{
+                width: 3rem;
+            }
+        }
+
+        hr{
+            display: block;
+            width: 40%;
+            background-color: hsla(0, 0%, 100%, 1);
+            opacity: 25.15%;
+        }
+   
+    }
+
+    .home-section{
+        flex-direction: row;
+        min-height: 80vh;
+        margin-top: 6vh;
+        padding-inline: 5rem;
+        
+        .text-content{
+            align-items: unset;
+            text-align: left;
+        }
+    }
+
+    .subheading1{
+        font-size: 2vw;
+    }
+
+    .paragraph{
+        font-size: 1.5vw;
+        width: 60%;
+    }
+
+    .large-text{
+        font-size: 10vw;
+        margin: 4rem 0;
+    }
+
+    .explore-btn{
+        width: 20vw;
+        font-size: 2.5vw;
+        padding: unset;
+
+        &::before{
+            width: 20vw;
+        }
+    }
+
+    .button-wrapper{
+        margin: unset;
+        padding: unset;
+    }
+
+    .navbar{
+        .navbar-links{
+            a{
+                span{
+                    display: inline;
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width: 90rem) {
+    .large-text{
+        margin: 6rem 0;
+    }
+}
+
+
+@media only screen and (min-width: 106.25rem) {
+    .paragraph{
+        line-height: 3rem;
+    }
+
+}
+
+@media only screen and (min-width: 125rem) {
+    .large-text{
+        margin: 10rem 0;
+    }
+
+    .paragraph{
+        line-height: 4rem;
+    }
+}
+
+
+

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/style.css">
+  
+  <title>Space tourism website</title>
+</head>
+<body>
+  <main>
+    <header class="main-header">
+      <div class="logo">
+        <img src="./assets/shared/logo.svg" alt="logo">
+      </div>
+      <hr/>
+      <div class="hamburger">
+        <img src="./assets/shared/icon-hamburger.svg" alt="menu">
+      </div>
+      <nav class="navbar">
+        <ul class="navbar-links">
+          <li class="ff-condensed"><a id="home" class="links page-link" href="#"><span>00</span> Home</a></li>
+          <li class="ff-condensed"><a id="destination" class="links page-link" href="#"><span>01</span> Destination</a></li>
+          <li class="ff-condensed"><a id="crew" class="links page-link" href="#"><span>02</span> Crew</a></li>
+          <li class="ff-condensed"><a id="technology" class="links page-link" href="#"><span>03</span> Technology</a></li>
+        </ul>
+      </nav>
+    </header>
+    <nav class="mobile-nav">
+      <div class="close"><img src="./assets/shared/icon-close.svg" alt="close icon"></div>
+      <div>
+        <ul class="navlinks">
+          <li class="ff-condensed"><a id="home" class="mobile-links page-link" href="#"><span>00</span> Home</a></li>
+          <li class="ff-condensed"><a id="destination" class="mobile-links page-link" href="#"><span>01</span> Destination</a></li>
+          <li class="ff-condensed"><a id="crew" class="mobile-links page-link" href="#"><span>02</span> Crew</a></li>
+          <li class="ff-condensed"><a id="technology" class="mobile-links page-link" href="#"><span>03</span> Technology</a></li>
+        </ul>
+      </div>
+      
+    </nav>
+   
+      <section class="container home-section home">
+        <div class="text-content">
+          <p class="ff-condensed subheading1">So, you want to travel to</p>
+          <p class="ff-serif large-text">Space</p>
+          <p class="ff-sans paragraph">Let’s face it; if you want to go to space, you might as well genuinely go to 
+          outer space and not hover kind of on the edge of it. Well sit back, and relax 
+          because we’ll give you a truly out of this world experience!</p>
+        </div>
+        <div class="container button-wrapper">
+          <a href="#" class="ff-serif explore-btn" >Explore</a>
+        </div>
+   
+      </section>
+
+      <section class="container destination-section destination hide">
+        <div class="image-container">
+        <p class="ff-condensed"><span>01</span> Pick your destination</p>
+        <div class="image-wrapper"><img id="dest-img" src="./assets/destination/image-moon.png" alt="Destination image"></div>
+        </div>
+        <div class="text-container">
+        <div class="nav-wrapper">
+          <nav class="secondary-nav">
+            <ul class="navlinks">
+              <li class="ff-condensed"><a id="moon" class="dest-links" href="#">Moon</a></li>
+              <li class="ff-condensed"><a id="mars" class="dest-links" href="#">Mars</a></li>
+              <li class="ff-condensed"><a id="europa" class="dest-links" href="#">Europa</a></li>
+              <li class="ff-condensed"><a id="titan" class=" dest-links" href="#">Titan</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="text-content">
+          <p id="dest-name" class="ff-serif large-text">Moon</p>
+          <p id="dest-desc" class="ff-sans paragraph">See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
+            regain perspective and come back refreshed. While you’re there, take in some history 
+            by visiting the Luna 2 and Apollo 11 landing sites.</p>
+            <hr>
+            <div class="values-wrapper">
+              <div class="first-value">
+                <p class="subheading1">Avg. Distance</p>
+                <p id="distance" class="subheading">384,400 KM</p>
+              </div>
+              <div class="second-value">
+                <p class="subheading1">Est. travel time</p>
+                <p id="travel" class="subheading">3 days</p>
+              </div>
+            </div>
+        </div>
+      </div>
+      </section>
+      <section class="container crew-section crew hide">
+        <div class="image-container">
+          <p class="ff-condensed"><span>02</span> Meet Your Crew</p>
+          <div class="image-wrapper"><img id="crew-img" src="./assets/crew/image-douglas-hurley.png" alt="crew"><hr></div>
+          </div>
+          <div class="text-container">
+          <div class="nav-wrapper">
+            <nav class="rounded-nav">
+              <ul class="navlinks">
+                <li><a id="commander" class="crew-links" href="#"></a></li>
+                <li><a id="specialist" class="crew-links" href="#"></a></li>
+                <li><a id="pilot" class="crew-links" href="#"></a></li>
+                <li><a id="engineer" class="crew-links" href="#"></a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="text-content">
+            <p id="crew-role" class="ff-serif large-text-2">Commander</p>
+            <p id="crew-name" class="ff-serif large-text">Douglas Hurley</p>
+            <p id="crew-desc" class="ff-sans paragraph">Douglas Gerald Hurley is an American engineer, former Marine Corps pilot 
+              and former NASA astronaut. He launched into space for the third time as 
+              commander of Crew Dragon Demo-2.</p>
+          </div>
+          <p class="ff-condensed"><span>02</span> Meet Your Crew</p>
+        </div>
+      </section>
+      <section class="technology-section technology hide">
+        <p class="ff-condensed"><span>03</span> Space Launch 101</p>
+        <div class="image-container">
+          <p class="ff-condensed"><span>03</span> Space Launch 101</p>
+          <div class="image-wrapper"><img id="tech-img" src="./assets/technology/image-launch-vehicle-landscape.jpg" alt="technology"></div>
+          </div>
+          <div class="text-container">
+          <div class="nav-wrapper">
+            <nav class="rounded-nav">
+              <ul class="navlinks">
+                <li><a id="vehicle" class="tech-links active-rounded" href="#">1</a></li>
+                <li><a id="port" class="tech-links" href="#">2</a></li>
+                <li><a id="capsule" class="tech-links" href="#">3</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="text-content">
+            <p class="ff-condensed large-text-2">The terminology<span>...</span></p>
+            <p id="tech-name" class="ff-serif large-text">Launch vehicle</p>
+            <p id="tech-desc" class="ff-sans paragraph">A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a 
+            payload from Earth's surface to space, usually to Earth orbit or beyond. Our 
+            WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, 
+            it's quite an awe-inspiring sight on the launch pad!</p>
+          </div>
+        </div>
+      </section>
+  </main>
+  
+  <script src="./index.js"></script>
+</body>
+</html>
