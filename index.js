@@ -100,13 +100,13 @@ page_links.forEach(page_link => {
                 else if(section.classList.contains("hide")){
                     section.classList.remove("hide");
                     if(window.screen.width < 720){
-                        document.body.childNodes[1].style.backgroundImage = `url(../assets/${page_link.id}/background-${page_link.id}-mobile.jpg)`; 
+                        document.body.childNodes[1].style.backgroundImage = `url(./assets/${page_link.id}/background-${page_link.id}-mobile.jpg)`; 
                     }
                     else if(window.screen.width < 1032){
-                        document.body.childNodes[1].style.backgroundImage = `url(../assets/${page_link.id}/background-${page_link.id}-tablet.jpg)`;
+                        document.body.childNodes[1].style.backgroundImage = `url(./assets/${page_link.id}/background-${page_link.id}-tablet.jpg)`;
                     }
                     else{
-                        document.body.childNodes[1].style.backgroundImage = `url(../assets/${page_link.id}/background-${page_link.id}-desktop.jpg)`;
+                        document.body.childNodes[1].style.backgroundImage = `url(./assets/${page_link.id}/background-${page_link.id}-desktop.jpg)`;
                     }
                 }
 
@@ -208,13 +208,13 @@ explore.addEventListener("click", function(){
         sections[1].classList.remove("hide");
         sections[1].classList.add("show");
         if(window.screen.width < 720){
-            document.body.childNodes[1].style.backgroundImage = `url(../assets/destination/background-destination-mobile.jpg)`; 
+            document.body.childNodes[1].style.backgroundImage = `url(./assets/destination/background-destination-mobile.jpg)`; 
         }
         else if(window.screen.width < 1032){
-            document.body.childNodes[1].style.backgroundImage = `url(../assets/destination/background-destination-tablet.jpg)`;
+            document.body.childNodes[1].style.backgroundImage = `url(./assets/destination/background-destination-tablet.jpg)`;
         }
         else{
-            document.body.childNodes[1].style.backgroundImage = `url(../assets/destination/background-destination-desktop.jpg)`;
+            document.body.childNodes[1].style.backgroundImage = `url(./assets/destination/background-destination-desktop.jpg)`;
         }
     }
     
