@@ -1130,6 +1130,7 @@ main {
 }
 
 .mobile-nav {
+  position: relative;
   display: block;
   background-color: transparent;
   -webkit-backdrop-filter: blur(20px);
@@ -1150,13 +1151,9 @@ main {
 }
 
 .mobile-nav .close {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-  padding: 20px;
+  position: absolute;
+  top: 25px;
+  right: 30px;
 }
 
 .mobile-nav .navlinks {

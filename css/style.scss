@@ -176,6 +176,7 @@ main{
 }
 
 .mobile-nav{
+    position: relative;
     display: block;
     background-color: transparent;
     backdrop-filter: blur(20px);
@@ -190,9 +191,9 @@ main{
     transition: transform 300ms ease-in-out;
 
     .close{
-        display: flex;
-        justify-content: end;
-        padding: 20px;
+        position: absolute;
+        top: 25px;
+        right: 30px;
     }
 
     .navlinks{
